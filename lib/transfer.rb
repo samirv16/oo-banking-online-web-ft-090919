@@ -17,7 +17,7 @@ class Transfer
     if @status == "complete"
       puts "This transaction has already been completed."
       elsif
-      @sender.balance > @amount && @status == "pending"
+      valid? && @sender.balance > @amount && @status == "pending"
       @sender.balance -= @amount
       @receiver.balance += @amount
       @status = "complete"
