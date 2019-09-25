@@ -14,9 +14,9 @@ class Transfer
   end 
   
   def execute_transaction
-    if @status == "complete"
-      puts "This transaction has already been completed."
-    end
+    # if @status == "complete"
+    #   puts "This transaction has already been completed."
+    # end
     
     if @sender.balance > @amount && @status == "pending"
       @sender.balance -= @amount
